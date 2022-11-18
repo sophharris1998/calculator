@@ -7,12 +7,12 @@
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 4;
-    width: 35rem;
-    height: 35rem;
-
+    height: 100%;
+    
     button{
         font-family:'Rubik', sans-serif;
-        font-size: 7rem;
+        font-size: 3rem;
+        background-color: white;
     
     }
 }

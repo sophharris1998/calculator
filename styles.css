@@ -8,6 +8,8 @@
   grid-template-rows: 1fr 1fr 4fr;
   width: 35rem;
   height: 35rem;
+  border: solid black 1rem;
+  background-color: black;
 }
 
 .solar {
@@ -15,6 +17,7 @@
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
+  width: 100%;
 }
 
 .buttonsAll {
@@ -25,12 +28,12 @@
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 4;
-  width: 35rem;
-  height: 35rem;
+  height: 100%;
 }
 .buttonsAll button {
   font-family: "Rubik", sans-serif;
-  font-size: 7rem;
+  font-size: 3rem;
+  background-color: white;
 }
 
 #calcScreen {
@@ -38,9 +41,5 @@
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 3;
-}
-
-.buttonsAll {
-  box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
+  background-color: gray;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,10 @@
+@use "calculatorGrid" as*;
+@use "solar";
+@use "buttons";
+@use "screen";
+
+.buttonsAll {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+

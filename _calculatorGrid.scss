@@ -1,0 +1,11 @@
+.calculator {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 4fr;
+  width: 35rem;
+  height: 35rem;
+}

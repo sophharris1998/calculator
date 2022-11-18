@@ -1,0 +1,46 @@
+.calculator {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 4fr;
+  width: 35rem;
+  height: 35rem;
+}
+
+.solar {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.buttonsAll {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  width: 35rem;
+  height: 35rem;
+}
+.buttonsAll button {
+  font-family: "Rubik", sans-serif;
+  font-size: 7rem;
+}
+
+#calcScreen {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.buttonsAll {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}/*# sourceMappingURL=styles.css.map */

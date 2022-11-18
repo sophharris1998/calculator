@@ -1,0 +1,18 @@
+
+.buttonsAll {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    width: 35rem;
+    height: 35rem;
+
+    button{
+        font-family:'Rubik', sans-serif;
+        font-size: 7rem;
+    
+    }
+}

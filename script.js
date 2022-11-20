@@ -13,6 +13,10 @@ const buttonNumberDisplay = (button) => {
   if (displayingAnswer == true) {
     clearDisplay();
   }
+  if (screenDisplay.innerText == "0") {
+    screenDisplay.innerText = "";
+  }
+
   screenDisplay.innerText += button.innerText;
 };
 for (let index = 0; index < buttonsArray.length; index++) {
@@ -24,7 +28,7 @@ for (let index = 0; index < buttonsArray.length; index++) {
 //This makes the C button clear what is on the calculator display
 const calcButtonClear = document.querySelector("#calcButtonClear");
 const clearDisplay = () => {
-  screenDisplay.innerText = "0";
+  screenDisplay.innerText = "";
 };
 
 //This is going to reset the storednumber back to 0
@@ -45,8 +49,7 @@ const plusNumber = () => {
     inputNumberPrimary == parseInt(screenDisplay.innerText);
     inputNumberSecondary = 0;
     displayingAnswer = false;
-  }
-  if (inputNumberPrimary == 0) {
+  } else if (inputNumberPrimary == 0) {
     inputNumberPrimary = parseInt(screenDisplay.innerText);
   } else {
     inputNumberSecondary = parseInt(screenDisplay.innerText);

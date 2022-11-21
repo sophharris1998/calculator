@@ -8,30 +8,35 @@ let operation = "";
 let displayingAnswer = false;
 
 //This makes all numbers display when clicked
+// We are getting all of the calculator number buttons
 const buttonsArray = document.querySelectorAll("#calcButton");
+
+// Writing a fuction to say when you press a numbered button it should dispay this number on the calculator screen
 const buttonNumberDisplay = (button) => {
+  //An answer is displayed, when another button is pressed...
   if (displayingAnswer == true) {
+    //The screen will clear but the console will still store the answer
     clearDisplay();
   }
-  if (screenDisplay.innerText == "0") {
-    screenDisplay.innerText = "";
-  }
-
+  // When a number is pressed it adds onto the string on the screen
   screenDisplay.innerText += button.innerText;
 };
+
+// looping through numbered buttons and when clicked displaying them to the Calculator Display
 for (let index = 0; index < buttonsArray.length; index++) {
   buttonsArray[index].addEventListener("click", function () {
     buttonNumberDisplay(buttonsArray[index]);
   });
 }
 
-//This makes the C button clear what is on the calculator display
-const calcButtonClear = document.querySelector("#calcButtonClear");
+// The function clearDisplay means dispay an empty string
 const clearDisplay = () => {
   screenDisplay.innerText = "";
 };
 
-//This is going to reset the storednumber back to 0
+// going back to HTML and finding calcButtonClear,
+const calcButtonClear = document.querySelector("#calcButtonClear");
+//clearDisplayStored number is another function that runs when we click the C button. Resets everything back to 0 and doesn't display answer anymore.
 const clearDisplayStoredNumber = () => {
   storeNumber = 0;
   screenDisplay.innerText = "0";
@@ -39,10 +44,10 @@ const clearDisplayStoredNumber = () => {
   inputNumberSecondary = 0;
   displayingAnswer = false;
 };
-
+//event listener allows the function to run when clear is clicked
 calcButtonClear.addEventListener("click", clearDisplayStoredNumber);
 
-//This makes the plus symbol work on the Calculator
+//refers back to the HTML calcButtonPlus
 const calcButtonPlus = document.querySelector("#calcButtonPlus");
 const plusNumber = () => {
   if (displayingAnswer == true) {

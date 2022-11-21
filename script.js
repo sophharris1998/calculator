@@ -49,7 +49,11 @@ calcButtonClear.addEventListener("click", clearDisplayStoredNumber);
 
 //refers back to the HTML calcButtonPlus
 const calcButtonPlus = document.querySelector("#calcButtonPlus");
+//another function dedicated to adding numbers together
 const plusNumber = () => {
+  // CHECK FROM HERE I DONT UNDERSTAND
+
+  // If the asnwer is displaying on the calculator screen the answer becomes the primary number and secondary number stays at 0
   if (displayingAnswer == true) {
     inputNumberPrimary == parseInt(screenDisplay.innerText);
     inputNumberSecondary = 0;
@@ -147,8 +151,9 @@ const divideNumber = () => {
 };
 calcButtonDivide.addEventListener("click", divideNumber);
 
-//This makes the equals button show the result of the equation
+//refers back to the calcButtonEquals in HTML
 const calcButtonEquals = document.querySelector("#calcButtonEquals");
+//takes the last stored operation finds the stored number and displays it
 const theAnswer = () => {
   if (lastStoredOperation == "+=") {
     plusNumber();

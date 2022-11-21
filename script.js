@@ -70,45 +70,75 @@ calcButtonPlus.addEventListener("click", plusNumber);
 //This makes the plus symbol work on the Calculator
 const calcButtonMinus = document.querySelector("#calcButtonMinus");
 const minusNumber = () => {
-  if (initalClick == true) {
-    storeNumber = parseInt(screenDisplay.innerText);
-    initalClick = false;
+  if (displayingAnswer == true) {
+    inputNumberPrimary == parseInt(screenDisplay.innerText);
+    inputNumberSecondary = 0;
+    displayingAnswer = false;
+  } else if (inputNumberPrimary == 0) {
+    inputNumberPrimary = parseInt(screenDisplay.innerText);
   } else {
-    storeNumber -= parseInt(screenDisplay.innerText);
+    inputNumberSecondary = parseInt(screenDisplay.innerText);
   }
-  clearDisplay();
-  console.log(storeNumber);
+  console.log(inputNumberPrimary);
+  console.log(inputNumberSecondary);
   lastStoredOperation = "-=";
+  clearDisplay();
+  if (inputNumberPrimary != 0 && inputNumberSecondary != 0) {
+    inputNumberPrimary = inputNumberPrimary - inputNumberSecondary;
+    screenDisplay.innerText = inputNumberPrimary;
+    displayingAnswer = true;
+    inputNumberSecondary = 0;
+  }
 };
 calcButtonMinus.addEventListener("click", minusNumber);
 
 //This makes the multiply symbol work on the Calculator
 const calcButtonTimes = document.querySelector("#calcButtonTimes");
 const timesNumber = () => {
-  if (initalClick == true) {
-    storeNumber = parseInt(screenDisplay.innerText);
-    initalClick = false;
+  if (displayingAnswer == true) {
+    inputNumberPrimary == parseInt(screenDisplay.innerText);
+    inputNumberSecondary = 0;
+    displayingAnswer = false;
+  } else if (inputNumberPrimary == 0) {
+    inputNumberPrimary = parseInt(screenDisplay.innerText);
   } else {
-    storeNumber *= parseInt(screenDisplay.innerText);
+    inputNumberSecondary = parseInt(screenDisplay.innerText);
   }
-  clearDisplay();
-  console.log(storeNumber);
+  console.log(inputNumberPrimary);
+  console.log(inputNumberSecondary);
   lastStoredOperation = "*=";
+  clearDisplay();
+  if (inputNumberPrimary != 0 && inputNumberSecondary != 0) {
+    inputNumberPrimary = inputNumberPrimary * inputNumberSecondary;
+    screenDisplay.innerText = inputNumberPrimary;
+    displayingAnswer = true;
+    inputNumberSecondary = 0;
+  }
 };
 calcButtonTimes.addEventListener("click", timesNumber);
 
 //This makes the divide symbol work on the Calculator
 const calcButtonDivide = document.querySelector("#calcButtonDivide");
 const divideNumber = () => {
-  if (initalClick == true) {
-    storeNumber = parseInt(screenDisplay.innerText);
-    initalClick = false;
+  if (displayingAnswer == true) {
+    inputNumberPrimary == parseInt(screenDisplay.innerText);
+    inputNumberSecondary = 0;
+    displayingAnswer = false;
+  } else if (inputNumberPrimary == 0) {
+    inputNumberPrimary = parseInt(screenDisplay.innerText);
   } else {
-    storeNumber /= parseInt(screenDisplay.innerText);
+    inputNumberSecondary = parseInt(screenDisplay.innerText);
   }
-  clearDisplay();
-  console.log(storeNumber);
+  console.log(inputNumberPrimary);
+  console.log(inputNumberSecondary);
   lastStoredOperation = "/=";
+  clearDisplay();
+  if (inputNumberPrimary != 0 && inputNumberSecondary != 0) {
+    inputNumberPrimary = inputNumberPrimary / inputNumberSecondary;
+    screenDisplay.innerText = inputNumberPrimary;
+    displayingAnswer = true;
+    inputNumberSecondary = 0;
+  }
 };
 calcButtonDivide.addEventListener("click", divideNumber);
 

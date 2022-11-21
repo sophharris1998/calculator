@@ -8,11 +8,13 @@
     grid-row-start: 3;
     grid-row-end: 4;
     height: 100%;
+    box-shadow: 0.1rem;
+    
     
     button{
         font-family:'Rubik', sans-serif;
         font-size: 3rem;
-        background-color: white;
+        color: to right, rgb(1, 250, 180), rgb(10, 135, 120);
     
     }
 }
